@@ -1,16 +1,22 @@
 const express = require('express')
+const mongoose = require('mongoose');
 const User = require('./src/models/user.js');
 
 const app = express()
 app.use(express.json());
 
 // //Conexion Base de datos
-// const dbURI = 'mongodb://localhost:3000/'; 
-
-// mongoose.connect(dbURI, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// });
+const dbURI = 'mongodb://localhost:27017/tienda';
+mongoose.connect(dbURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => {
+    console.log('Conexión exitosa a la base de datos');
+  })
+  .catch((error) => {
+    console.error('Error en la conexión a la base de datos:', error);
+  });
 
 //ENDPOINTS
 app.get('/Tienda/Productos', (req, res) => {
