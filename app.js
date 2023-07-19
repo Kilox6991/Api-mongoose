@@ -6,11 +6,7 @@ const app = express()
 app.use(express.json());
 
 // //Conexion Base de datos
-const dbURI = 'mongodb://localhost:27017/tienda';
-mongoose.connect(dbURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect('mongodb://127.0.0.1:27017/tienda')
 .then(() => {
     console.log('Conexión exitosa a la base de datos');
   })
