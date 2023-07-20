@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const User = require('./src/models/user.js');
 
 const userRoutes = require('./src/routes/user.js');
+const productRoutes = require ('./src/routes/product.js')
+
 
 const app = express()
 app.use(express.json());
@@ -17,8 +19,16 @@ mongoose.connect('mongodb://127.0.0.1:27017/tienda')
   });
 
 //ENDPOINTS
-app.use('/tienda', userRoutes);
-app.use('/tienda', userRoutes);
+app.use('/tienda', userRoutes);//Signup 
+
+app.use('/tienda', userRoutes);//Login
+
+app.use('/tienda', productRoutes)//Crear producto
+
+app.use('/tienda', productRoutes)//Actualizar producto
+
+
+
 
 
 app.get('/Tienda/Productos', (req, res) => {
@@ -32,16 +42,6 @@ app.get('/Tienda/Producto/:idProducto', (req, res) => {
   res.send(`Endpoint GET para obtener el producto con ID ${idProducto}`);
 });
 
-app.put('/Tienda/:idProducto', (req, res) => {
-  // Lógica para actualizar un producto por su ID
-  const idProducto = req.params.idProducto;
-  res.send(`Endpoint PUT para actualizar el producto con ID ${idProducto}`);
-});
-
-app.post('/Tienda', (req, res) => {
-  // Lógica para crear un nuevo producto
-  res.send('Endpoint POST para crear un nuevo producto');
-});
 
 app.delete('/Tienda/:idProducto', (req, res) => {
   // Lógica para eliminar un producto por su ID

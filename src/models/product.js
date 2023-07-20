@@ -7,7 +7,7 @@ const productSchema = new mongoose.Schema({
     score: {type: Number, min:0, max: 5},
     price: {type: Number, require:true}, 
     scoreArray: [{type: Number, min: 0, max:5},],
-    IdCategoria: {type: mongoose.Schema.Types, ref:'Category'},
+    IdCategoria: {type: mongoose.Schema.Types.ObjectId, ref:'Category'},
     createdAt: {type:Date, default:Date.now}
 })
 
