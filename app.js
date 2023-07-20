@@ -26,23 +26,6 @@ app.use('/tienda', productRoutes)//Crear, actualizar y borrar productos
 
 app.use('/tienda/category', categoryRoutes)//Agregar, actualizar y borrar Categorias
 
-
-
-app.get('/Tienda/Producto/:idProducto', (req, res) => {
-  // Logica para obtener un producto por su ID
-  const idProducto = req.params.idProducto;
-  res.send(`Endpoint GET para obtener el producto con ID ${idProducto}`);
-});
-
-
-app.delete('/Tienda/:idProducto', (req, res) => {
-  // Lógica para eliminar un producto por su ID
-  const idProducto = req.params.idProducto;
-  res.send(`Endpoint DELETE para eliminar el producto con ID ${idProducto}`);
-});
-
-
-
 const PORT = 3000;
 
 app.listen(PORT, () => console.log(`Server ON ${PORT}`));

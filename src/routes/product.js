@@ -15,6 +15,8 @@ router.delete('/Tienda/:idProducto', productController.deleteProduct)
 router.get('/Tienda', productController.allProducts)
 //Ver un producto
 router.get('/Tienda/:idProducto', productController.oneProduct)
+//Votar Producto
+router.post('/Tienda/vote', productController.voteProduct);
 
 module.exports = router;
 
