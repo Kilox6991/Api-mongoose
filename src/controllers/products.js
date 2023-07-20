@@ -63,8 +63,33 @@ const deleteProduct = async(req, res) => {
       }
 };
 
+//Obtener todos los productos
+const allProducts = async(req, res) =>{
+    try {
+        // Obtener todos los productos desde la base de datos
+        const allProducts = await Product.find();
+        // Enviar los productos como respuesta
+        res.json(allProducts);
+      } catch (error) {
+        res.status(500).send('Error al obtener los productos');
+      }
+};
+//Obtener un producto
+const oneProduct = async(req, res)=>{
+    const idProducto = req.params.idProducto; 
+    try{
+        //Obtener un producto por ID
+        const oneProduct = await Product.findById(idProducto)
+        res.json(oneProduct)
+    } catch(error){
+        res.status(500).send('Error al obtener el producto');
+    }
+}
+
 module.exports = {
     updateProduct,
     createProduct,
     deleteProduct,
+    allProducts,
+    oneProduct,
 };

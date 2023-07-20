@@ -20,26 +20,13 @@ mongoose.connect('mongodb://127.0.0.1:27017/tienda')
   });
 
 //ENDPOINTS
-app.use('/tienda', userRoutes);//Signup 
+app.use('/tienda', userRoutes);//Signup y Login
 
-app.use('/tienda', userRoutes);//Login
-
-app.use('/tienda', productRoutes)//Crear producto
-
-app.use('/tienda', productRoutes)//Actualizar producto
-
-app.use('/tienda', productRoutes)//Borrar producto
+app.use('/tienda', productRoutes)//Crear, actualizar y borrar productos
 
 app.use('/tienda/category', categoryRoutes)//Agregar, actualizar y borrar Categorias
 
 
-
-
-
-app.get('/Tienda/Productos', (req, res) => {
-  // Logica para obtener todos los productos
-  res.send('Endpoint GET para obtener todos los productos');
-});
 
 app.get('/Tienda/Producto/:idProducto', (req, res) => {
   // Logica para obtener un producto por su ID

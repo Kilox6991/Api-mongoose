@@ -11,6 +11,10 @@ router.post('/Tienda', productController.createProduct);
 router.put('/Tienda/:idProducto', productController.updateProduct);
 //Borrar producto
 router.delete('/Tienda/:idProducto', productController.deleteProduct)
+//Ver todos los productos
+router.get('/Tienda', productController.allProducts)
+//Ver un producto
+router.get('/Tienda/:idProducto', productController.oneProduct)
 
 module.exports = router;
 
