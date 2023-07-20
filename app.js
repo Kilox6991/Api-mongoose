@@ -27,6 +27,8 @@ app.use('/tienda', productRoutes)//Crear producto
 
 app.use('/tienda', productRoutes)//Actualizar producto
 
+app.use('/tienda', productRoutes)//Borrar producto
+
 
 
 
