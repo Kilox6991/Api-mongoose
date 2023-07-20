@@ -4,6 +4,7 @@ const User = require('./src/models/user.js');
 
 const userRoutes = require('./src/routes/user.js');
 const productRoutes = require ('./src/routes/product.js')
+const categoryRoutes = require ('./src/routes/category.js')
 
 
 const app = express()
@@ -28,6 +29,8 @@ app.use('/tienda', productRoutes)//Crear producto
 app.use('/tienda', productRoutes)//Actualizar producto
 
 app.use('/tienda', productRoutes)//Borrar producto
+
+app.use('/tienda/category', categoryRoutes)//Agregar, actualizar y borrar Categorias
 
 
 
