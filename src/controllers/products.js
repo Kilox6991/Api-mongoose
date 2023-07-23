@@ -87,15 +87,18 @@ const voteProduct = async (req, res) => {
   try {
     // Verificar si el usuario ya ha votado este producto
     const product = await Product.findById(productId);
-    if (product.score.includes(userId)) {
+    if (product.scoreId.includes(userId)) {
       return res.status(400).send("El usuario ya ha votado este producto");
     }
 
     // Agregar el ID del usuario al array de votantes
-    product.score.push(userId);
+    product.scoreId.push(userId);
 
     // Actualizar la puntuación media del producto
-    
+    product.scoreArray.push(score);
+    const totalScores = product.scoreArray.reduce((sum, score) => sum + score, 0);
+    const averageScore = totalScores / product.scoreArray.length;
+    product.totalVote = averageScore;
 
     await product.save();
 
@@ -103,6 +106,10 @@ const voteProduct = async (req, res) => {
   } catch (error) {
     res.status(500).send("Error al almacenar la votación");
   }
+};
+
+module.exports = {
+  voteProduct,
 };
 
 module.exports = {
