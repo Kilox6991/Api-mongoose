@@ -1,6 +1,8 @@
+require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose');
 const User = require('./src/models/user.js');
+
 
 const userRoutes = require('./src/routes/user.js');
 const productRoutes = require ('./src/routes/product.js')
@@ -11,7 +13,7 @@ const app = express()
 app.use(express.json());
 
 // //Conexion Base de datos
-mongoose.connect('mongodb://127.0.0.1:27017/tienda')
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('Conexión exitosa a la base de datos');
   })
