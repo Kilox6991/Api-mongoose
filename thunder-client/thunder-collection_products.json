@@ -1,0 +1,164 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "products",
+    "dateExported": "2023-07-24T19:47:43.805Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "11e72060-3e52-4cf2-8a41-26be5be2cbb9",
+            "colId": "9d03481b-7cb2-4eae-89ff-6bf9d9b32d1e",
+            "containerId": "",
+            "name": "Borrar un producto",
+            "url": "localhost:3000/Tienda/tienda/64bec36b176ed346a32a43c6",
+            "method": "DELETE",
+            "sortNum": 10000,
+            "created": "2023-07-24T19:31:32.955Z",
+            "modified": "2023-07-24T19:31:32.955Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlBlcGUiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjkwMjIzMjU0fQ.xmS8TnbGpfia8TsFijKqvYLbvZeN86j6l4lJqUIPjQ8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nameProduct",
+                        "value": "Camiseta"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Camisetaaa"
+                    },
+                    {
+                        "name": "price",
+                        "value": "20"
+                    },
+                    {
+                        "name": "IdCategoria",
+                        "value": "64b96fee7137f15722253374"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "imgProduct",
+                        "value": "c:\\Users\\4infm\\OneDrive\\Escritorio\\insta.png"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "b2fb7ba3-d96b-468f-9ddd-b6734e1b0413",
+            "colId": "9d03481b-7cb2-4eae-89ff-6bf9d9b32d1e",
+            "containerId": "",
+            "name": "Crear un nuevo producto",
+            "url": "localhost:3000/Tienda/tienda",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-07-24T19:31:43.361Z",
+            "modified": "2023-07-24T19:31:43.361Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlBlcGUiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjkwMjIzMjU0fQ.xmS8TnbGpfia8TsFijKqvYLbvZeN86j6l4lJqUIPjQ8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nameProduct",
+                        "value": "Camiseta"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Camisetaaa"
+                    },
+                    {
+                        "name": "price",
+                        "value": "20"
+                    },
+                    {
+                        "name": "IdCategoria",
+                        "value": "64b96fee7137f15722253374"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "imgProduct",
+                        "value": "c:\\Users\\4infm\\OneDrive\\Escritorio\\insta.png"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "5c2032ce-22fd-415b-9018-af005815f758",
+            "colId": "9d03481b-7cb2-4eae-89ff-6bf9d9b32d1e",
+            "containerId": "",
+            "name": "Actualizar un producto",
+            "url": "https://www.thunderclient.com/64bec443e2c9fffe1f2cafba",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-07-24T19:35:17.566Z",
+            "modified": "2023-07-24T19:35:17.566Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d3284b72-fbe1-4b92-a0b2-d4611ac13c9e",
+            "colId": "9d03481b-7cb2-4eae-89ff-6bf9d9b32d1e",
+            "containerId": "",
+            "name": "Ver todos los productos",
+            "url": "localhost:3000/tienda/Tienda",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-07-24T19:37:40.757Z",
+            "modified": "2023-07-24T19:37:40.757Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d287edac-4372-4276-b45e-48282cf2a9f0",
+            "colId": "9d03481b-7cb2-4eae-89ff-6bf9d9b32d1e",
+            "containerId": "",
+            "name": "Ver un producto",
+            "url": "localhost:3000/tienda/Tienda/64bec443e2c9fffe1f2cafba",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-07-24T19:38:20.916Z",
+            "modified": "2023-07-24T19:38:20.916Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "96d70289-7cb1-4b5d-bb68-8a1a24f029a2",
+            "colId": "9d03481b-7cb2-4eae-89ff-6bf9d9b32d1e",
+            "containerId": "",
+            "name": "Votar un producto",
+            "url": "localhost:3000/tienda/Tienda/vote",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-07-24T19:38:56.661Z",
+            "modified": "2023-07-24T19:38:56.661Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"productId\":\"64bd51bc4065420bc0cc2a3f\",\n  \"userId\":\"64bd4e4faa9341d380a9a41d\",\n  \"score\":\"4\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

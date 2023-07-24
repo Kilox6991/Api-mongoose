@@ -12,9 +12,7 @@ const validateParamId = require('../middlewares/validateParamId')
 
 const router = express.Router() 
 //Crear nuevo producto
-router.post('/Tienda',isAuth,upload.single('imgProduct'), productSchemaValidation, validate,
-
-productController.createProduct);
+router.post('/Tienda',isAuth,upload.single('imgProduct'), productSchemaValidation, validate,productController.createProduct);
 //Actualizar nuevo producto
 router.put('/Tienda/:idProducto',isAuth,isAdmin, productController.updateProduct);
 //Borrar producto
