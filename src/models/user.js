@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
 })
 
 userSchema.methods.generateJWT = function () {
-	return jwt.sign(pick(this, ['username', 'isAdmin']), "Holapepe")
+	return jwt.sign(pick(this, ['username', 'isAdmin']), process.env.jwtPrivateKey)
 }
 
 const User = mongoose.model('User', userSchema)

@@ -107,10 +107,8 @@ const voteProduct = async (req, res) => {
     res.status(500).send("Error al almacenar la votación");
   }
 };
+//Filtrar por categoria, precio y pu
 
-module.exports = {
-  voteProduct,
-};
 
 module.exports = {
   updateProduct,
