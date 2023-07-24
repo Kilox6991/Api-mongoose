@@ -1,13 +1,20 @@
-const Product = require("../models/product");
+const {Product} = require("../models/product");
+
+const cloudinary = require('../utils/cloudinary')
 
 //Crear un nuevo producto
 const createProduct = async (req, res) => {
+
+  const {path: imgProduct, filename: cloudinaryId} = req.file
+
   const { nameProduct, description, score, price, image, categoryId } =
     req.body;
   try {
     const newProduct = new Product({
       nameProduct,
       description,
+      imgProduct,
+      cloudinaryId,
       score,
       price,
       image,
@@ -50,7 +57,9 @@ const deleteProduct = async (req, res) => {
     }
 
     // Elimina el producto de la base de datos
-    product.deleteOne();
+    await product.deleteOne();
+
+    await cloudinary.uploader.destroy(product.cloudinaryId, {invalidate:true})
 
     res.send("Producto eliminado exitosamente");
   } catch (error) {

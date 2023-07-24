@@ -1,6 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose');
+const multer = require('multer')
 const User = require('./src/models/user.js');
 
 
@@ -21,6 +22,7 @@ mongoose.connect(process.env.MONGO_URI)
     console.error('Error en la conexión a la base de datos:', error);
   });
 
+
 //ENDPOINTS
 app.use('/tienda', userRoutes);//Signup y Login
 
@@ -31,3 +33,4 @@ app.use('/tienda/category', categoryRoutes)//Agregar, actualizar y borrar Catego
 const PORT = 3000;
 
 app.listen(PORT, () => console.log(`Server ON ${PORT}`));
+
