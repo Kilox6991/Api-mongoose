@@ -1,0 +1,176 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "tienda-products",
+    "dateExported": "2023-08-08T17:44:56.242Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "14fe28c7-d990-4a7a-932e-dfde2d13c1f3",
+            "colId": "6ed5eb89-fbe0-492e-bcba-8130f1d86de8",
+            "containerId": "",
+            "name": "/products/:productId",
+            "url": "/64d27a5bd5fff629c5b99dd5",
+            "method": "DELETE",
+            "sortNum": 10000,
+            "created": "2023-07-31T11:03:54.124Z",
+            "modified": "2023-08-08T17:44:24.036Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5MDgwMTcxMH0.TOoAucFMiNMMgfeogkDbdMEzqeAsjipQ43Z7rbDMClk"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6a6a9b42-5c06-4aed-ba39-2c7e7e699b71",
+            "colId": "6ed5eb89-fbe0-492e-bcba-8130f1d86de8",
+            "containerId": "",
+            "name": "/products",
+            "url": "/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-07-31T11:03:54.125Z",
+            "modified": "2023-08-08T17:42:55.032Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5MDgwMTcxMH0.TOoAucFMiNMMgfeogkDbdMEzqeAsjipQ43Z7rbDMClk"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Federico"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Un coche familiar para familias"
+                    },
+                    {
+                        "name": "price",
+                        "value": "52"
+                    },
+                    {
+                        "name": "categoryId",
+                        "value": "64d278d0a7cd1f2e65929b3a"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "imgProduct",
+                        "value": "/Users/allamas/Desktop/des_5.png"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "0d795d20-c1d5-4422-a3b2-f102dfcf6208",
+            "colId": "6ed5eb89-fbe0-492e-bcba-8130f1d86de8",
+            "containerId": "",
+            "name": "/products/:productId",
+            "url": "/64d27b93ea5234acd484f3b3",
+            "method": "PUT",
+            "sortNum": 25000,
+            "created": "2023-08-08T17:25:35.086Z",
+            "modified": "2023-08-08T17:43:03.478Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5MDgwMTcxMH0.TOoAucFMiNMMgfeogkDbdMEzqeAsjipQ43Z7rbDMClk",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Ferrari "
+                    },
+                    {
+                        "name": "description",
+                        "value": "Un coche familiar para familias"
+                    },
+                    {
+                        "name": "price",
+                        "value": "52"
+                    },
+                    {
+                        "name": "categoryId",
+                        "value": "64d278d0a7cd1f2e65929b3a"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "imgProduct",
+                        "value": "/Users/allamas/Desktop/des_5.png"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "91566bd1-dc46-401d-a8fc-7fd21a7bb18a",
+            "colId": "6ed5eb89-fbe0-492e-bcba-8130f1d86de8",
+            "containerId": "",
+            "name": "/products",
+            "url": "/",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-07-31T11:03:54.127Z",
+            "modified": "2023-08-08T17:09:03.065Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "85c8321e-e79c-4bcd-9792-ea1b8d3220ab",
+            "colId": "6ed5eb89-fbe0-492e-bcba-8130f1d86de8",
+            "containerId": "",
+            "name": "/products/:productId",
+            "url": "/products/64bec443e2c9fffe1f2cafba",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-07-31T11:03:54.128Z",
+            "modified": "2023-08-08T17:10:16.704Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1067426c-6b80-4547-aba4-acfc44a19042",
+            "colId": "6ed5eb89-fbe0-492e-bcba-8130f1d86de8",
+            "containerId": "",
+            "name": "/products/vote",
+            "url": "/products/vote",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-07-31T11:03:54.129Z",
+            "modified": "2023-08-08T17:05:33.646Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"productId\":\"64bd51bc4065420bc0cc2a3f\",\n  \"userId\":\"64bd4e4faa9341d380a9a41d\",\n  \"score\":\"4\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "{{host}}/products"
+        },
+        "envId": "1b299e4d-de32-466a-b65e-e43c688e8b2f"
+    }
+}

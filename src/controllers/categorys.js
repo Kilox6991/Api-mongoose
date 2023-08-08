@@ -1,58 +1,56 @@
 const Category = require('../models/category')
 
+const getAllCategories = async (req, res) => {
+	const categories = await Category.find()
+
+	res.json(categories)
+}
+
 //Crear un nuevo producto
 const createCategory = async (req, res) => {
-    const {nameCategory} = req.body;
-    try {
-        const newCategory = new Category({
-            nameCategory,
-        });
-        const savedCategory = await newCategory.save();
-        res.json(savedCategory);
-    } catch (error) {
-        res.status(500).send('Error al crear el Category');
-    }
-};
+	const { name } = req.body
 
+	const newCategory = new Category({ name })
+	const savedCategory = await newCategory.save()
+	res.json(savedCategory)
+}
 
 //Actualizar un Categoryo
 const updateCategory = async (req, res) => {
-    const idCategory = req.params.idCategory;
-    const updateFields = req.body;
-    try {
-        // Actualizar 
-        const updatedCategory = await Category.findByIdAndUpdate(idCategory,{$set: updateFields});
-        if (!updatedCategory) {
-            return res.status(404).send('La categoria no existe');
-        }
-        res.json(updatedCategory);
-    } catch (error) {
-        res.status(500).send('Error al actualizar la categoria');
-    }
-};
+	const idCategory = req.params.idCategory
+	const updateFields = req.body
+
+	// Actualizar
+	const updatedCategory = await Category.findByIdAndUpdate(idCategory, {
+		$set: updateFields,
+	})
+	if (!updatedCategory) {
+		return res.status(404).send('La categoria no existe')
+	}
+
+	res.json(updatedCategory)
+}
 
 //Borrar categoria
-const deleteCategory = async(req, res) => {
-    const idCategory = req.params.idCategory;
-    try {
-        // Busca la categoria por su ID
-        const category = await Category.findById(idCategory);
-        
-        if (!category) {
-          return res.status(404).send('Categoria no encontrada');
-        }
-    
-        // Elimina la categoria de la base de datos
-        category.deleteOne();
-    
-        res.send('Categoria eliminada exitosamente');
-      } catch (error) {
-        res.status(500).send('Error al eliminar la categoria');
-      }
-};
+const deleteCategory = async (req, res) => {
+	const idCategory = req.params.idCategory
+
+	// Busca la categoria por su ID
+	const category = await Category.findById(idCategory)
+
+	if (!category) {
+		return res.status(404).send('Categoria no encontrada')
+	}
+
+	// Elimina la categoria de la base de datos
+	category.deleteOne()
+
+	res.send('Categoria eliminada exitosamente')
+}
 
 module.exports = {
-    updateCategory,
-    createCategory,
-    deleteCategory,
-};
+	getAllCategories,
+	updateCategory,
+	createCategory,
+	deleteCategory,
+}

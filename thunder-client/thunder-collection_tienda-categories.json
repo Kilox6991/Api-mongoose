@@ -1,0 +1,96 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "tienda-categories",
+    "dateExported": "2023-08-08T17:44:49.313Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c8312cf5-3831-4c64-a584-ac4fd3bcb741",
+            "colId": "811e51d3-d97c-49be-b7fb-c8a3597cdb62",
+            "containerId": "",
+            "name": "/categories",
+            "url": "/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-07-31T11:03:54.122Z",
+            "modified": "2023-08-08T17:19:35.924Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5MDgwMTcxMH0.TOoAucFMiNMMgfeogkDbdMEzqeAsjipQ43Z7rbDMClk"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Frutas\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "46d650d6-02ad-4085-95d7-e6385466f08d",
+            "colId": "811e51d3-d97c-49be-b7fb-c8a3597cdb62",
+            "containerId": "",
+            "name": "/categories/:categoryId",
+            "url": "/64d27927447f196af254397a",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2023-07-31T11:03:54.124Z",
+            "modified": "2023-08-08T17:22:45.972Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Frutitas\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4cd7196e-470a-45d5-9e95-4fd0cf0ed8cb",
+            "colId": "811e51d3-d97c-49be-b7fb-c8a3597cdb62",
+            "containerId": "",
+            "name": "/categories/:categoryId",
+            "url": "/64d27",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-07-31T11:03:54.125Z",
+            "modified": "2023-08-08T17:23:34.525Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5MDgwMTcxMH0.TOoAucFMiNMMgfeogkDbdMEzqeAsjipQ43Z7rbDMClk"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4a3a4ae2-6f98-4216-8a60-3b5432fac8fd",
+            "colId": "811e51d3-d97c-49be-b7fb-c8a3597cdb62",
+            "containerId": "",
+            "name": "/categories",
+            "url": "/",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-07-31T11:06:49.316Z",
+            "modified": "2023-08-08T17:15:46.776Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFudG9uaW8iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjkwODAxNDU0fQ.zxUaPDKT9bsLgEYW4NOsWPxel5S1w5FSuKDQLhmhdDw"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "{{host}}/categories"
+        },
+        "envId": "1b299e4d-de32-466a-b65e-e43c688e8b2f"
+    }
+}

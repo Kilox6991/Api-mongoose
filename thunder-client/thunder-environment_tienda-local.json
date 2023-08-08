@@ -1,0 +1,20 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "tienda-local",
+    "dateExported": "2023-08-08T17:45:14.102Z",
+    "version": "1.0",
+    "variables": [
+        {
+            "name": "address",
+            "value": "localhost"
+        },
+        {
+            "name": "port",
+            "value": "3000"
+        },
+        {
+            "name": "host",
+            "value": "{{address}}:{{port}}/api"
+        }
+    ]
+}
