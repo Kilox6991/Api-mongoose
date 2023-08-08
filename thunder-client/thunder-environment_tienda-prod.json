@@ -1,0 +1,12 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "tienda-prod",
+    "dateExported": "2023-08-08T17:45:21.493Z",
+    "version": "1.0",
+    "variables": [
+        {
+            "name": "host",
+            "value": "https://tienda-f1h6.onrender.com/api"
+        }
+    ]
+}

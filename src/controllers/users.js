@@ -1,15 +1,26 @@
 const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken')
 
 const User = require('../models/user')
 
 const register = async (req, res) => {
 	const { password: plainTextPassword, ...userDetails } = req.body
 
+	const isUser = await User.findOne({
+		$or: [{ username: userDetails.username }, { email: userDetails.email }],
+	})
+
+	console.log(isUser)
+
+	if (isUser)
+		return res
+			.status(400)
+			.send('Se ha producido un problema inesperado vuelva a intentarlo')
+
 	const salt = await bcrypt.genSalt(10)
 	const password = await bcrypt.hash(plainTextPassword, salt)
 
-	const user = await User.create({ ...userDetails, password })
+	const user = await User.create({ ...userDetails, isAdmin: false, password })
 
 	const token = user.generateJWT()
 
